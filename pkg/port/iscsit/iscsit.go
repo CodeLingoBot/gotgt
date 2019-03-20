@@ -98,6 +98,9 @@ type ISCSITarget struct {
  * RFC 3720 iSCSI SSID = ISID , TPGT
  * ISID is an 6 bytes number, TPGT is an 2 bytes number
  * We combine ISID and TPGT together to be SSID
+ */RFC 3720 iSCSI SSID = ISID , TPGT
+ * ISID is an 6 bytes number, TPGT is an 2 bytes number
+ * We combine ISID and TPGT together to be SSID
  */
 func MakeSSID(ISID uint64, TPGT uint16) uint64 {
 	SSID := ISID<<16 | uint64(TPGT)

@@ -194,6 +194,11 @@ func InquiryPage0x83(host int, cmd *api.SCSICommand) (*bytes.Buffer, uint16) {
  *
  * Reference : SPC4r11
  * 6.6 - INQUIRY
+ */SPCInquiry Implements SCSI INQUIRY command
+ * The INQUIRY command requests the device server to return information regarding the logical unit and SCSI target device.
+ *
+ * Reference : SPC4r11
+ * 6.6 - INQUIRY
  */
 func SPCInquiry(host int, cmd *api.SCSICommand) api.SAMStat {
 	var (
@@ -322,6 +327,12 @@ sense:
  *
  * Reference : SPC4r11
  * 6.33 - REPORT LUNS
+ */SPCReportLuns Implements SCSI REPORT LUNS command
+ * The REPORT LUNS command requests the device server to return the peripheral Device
+ * logical unit inventory accessible to the I_T nexus.
+ *
+ * Reference : SPC4r11
+ * 6.33 - REPORT LUNS
  */
 func SPCReportLuns(host int, cmd *api.SCSICommand) api.SAMStat {
 	var (
@@ -426,6 +437,11 @@ func SPCStartStop(host int, cmd *api.SCSICommand) api.SAMStat {
  *
  * Reference : SPC4r11
  * 6.47 - TEST UNIT READY
+ */SPCTestUnit Implements SCSI TEST UNIT READY command
+ * The TEST UNIT READY command requests the device server to indicate whether the logical unit is ready.
+ *
+ * Reference : SPC4r11
+ * 6.47 - TEST UNIT READY
  */
 func SPCTestUnit(host int, cmd *api.SCSICommand) api.SAMStat {
 	/*
@@ -456,6 +472,13 @@ func SPCPreventAllowMediaRemoval(host int, cmd *api.SCSICommand) api.SAMStat {
 
 /*
  * SPCModeSense Implement SCSI MODE SENSE(6) and MODE SENSE(10) command
+ * The MODE SENSE command requests the device server to return the specified medium,
+ * logical unit, or peripheral device parameters.
+ *
+ * Reference : SPC4r11
+ * 6.11 - MODE SENSE(6)
+ * 6.12 - MODE SENSE(10)
+ */SPCModeSense Implement SCSI MODE SENSE(6) and MODE SENSE(10) command
  * The MODE SENSE command requests the device server to return the specified medium,
  * logical unit, or peripheral device parameters.
  *
@@ -581,6 +604,12 @@ sense:
 
 /*
  * SPCSendDiagnostics Implements SCSI SEND DIAGNOSTIC command
+ * The SEND DIAGNOSTIC command requests the device server to perform diagnostic operations
+ * on the SCSI target device, on the logical unit, or on both.
+ *
+ * Reference : SPC4r11
+ * 6.42 - SEND DIAGNOSTIC
+ */SPCSendDiagnostics Implements SCSI SEND DIAGNOSTIC command
  * The SEND DIAGNOSTIC command requests the device server to perform diagnostic operations
  * on the SCSI target device, on the logical unit, or on both.
  *
@@ -1293,6 +1322,11 @@ sense:
 
 /*
  * SPCRequestSense Implements SCSI REQUEST SENSE command
+ * The REQUEST SENSE command requests the device server to return parameter data that contains sense data.
+ *
+ * Reference : SPC4r11
+ * 6.39 - REQUEST SENSE
+ */SPCRequestSense Implements SCSI REQUEST SENSE command
  * The REQUEST SENSE command requests the device server to return parameter data that contains sense data.
  *
  * Reference : SPC4r11

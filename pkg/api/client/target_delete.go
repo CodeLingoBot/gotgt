@@ -23,7 +23,7 @@ import (
 	"golang.org/x/net/context"
 )
 
-// TargetCreate creates a target in the SCSI Target.
+// TargetRemove creates a target in the SCSI Target.
 func (cli *Client) TargetRemove(ctx context.Context, options api.TargetRemoveOptions) error {
 	query := url.Values{}
 	if options.Force {

@@ -237,6 +237,9 @@ const (
  * Transfer Length (if any)
  * Parameter List Length (if any)
  * Allocation Length (if any)
+ */Transfer Length (if any)
+ * Parameter List Length (if any)
+ * Allocation Length (if any)
  */
 func SCSICDBBufXLength(scb []byte) (int64, bool) {
 	var (

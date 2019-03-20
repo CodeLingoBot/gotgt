@@ -478,6 +478,7 @@ func (s *ISCSITargetDriver) ReInstatement(existSess *ISCSISession, conn *iscsiCo
 
 /*
  * iSCSI I_T nexus identifer = (iSCSI Initiator Name + 'i' + ISID, iSCSI Target Name + 't' + Portal Group Tag)
+ */GeniSCSIITNexusID iSCSI I_T nexus identifer = (iSCSI Initiator Name + 'i' + ISID, iSCSI Target Name + 't' + Portal Group Tag)
  */
 func GeniSCSIITNexusID(sess *ISCSISession) string {
 	strID := fmt.Sprintf("%si0x%12x,%st%d",

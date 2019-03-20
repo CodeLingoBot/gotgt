@@ -70,7 +70,7 @@ func NewPostRoute(path string, handler httputils.APIFunc) Route {
 	return NewRoute("POST", path, handler)
 }
 
-// NewPostRoute initializes a new route with the http method POST.
+// NewDeleteRoute initializes a new route with the http method POST.
 func NewDeleteRoute(path string, handler httputils.APIFunc) Route {
 	return NewRoute("DELETE", path, handler)
 }
